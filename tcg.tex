@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{colortbl}
+\usepackage{epigraph}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hhline}
+
+\usepackage{xcolor}
+\definecolor{light-gray}{gray}{0.95}
+
+\title{Terminal Core Guidelines}
+\author{Editors: names here}
+\date{2020-07-27 (draft, revision 0)}
+
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+\tableofcontents
+
+\section{Modern Terminal Emulators}
+
+What do modern terminal emulators do in 2020, what did they do in 1980.
+
+...
+
+\section{Syntax}
+
+Describing the syntax that is used for sending and receiving text and control functions.
+
+TODO:
+
+\begin{itemize}
+	\item FSM diagram describing the terminal parser (Unicode aware)
+	\item Sixel Graphics State Machine Diagram
+\end{itemize}
+
+\section{Control Functions}
+
+% Order function functions by category
+%
+% - Feature Detection
+%   - DA
+%   - DA2
+%   - DA3
+% - Modes
+%   - SM: set mode
+%   - RM: reset mode
+%   - DECSTBM: vertical (top/bottom) margins
+%   - DECSLRM: horizontal (left/right) margins
+%   - ...
+% - Character Sets
+%   - special line drawing character set
+%   - SS2
+%   - SS3
+%   - ...
+% - Cursor Movements
+%   - CUP: move cursor to position
+%   - CUU: move cursor up
+%   - CUD: move cursor down
+%   - VPA: vertical position absolute
+%   - HPA: horizontal position absolute
+% - screen buffer
+%   - scroll screen lines up (pan down)
+%   - scroll screen lines down (pan up)
+% - Graphics Rendition
+% - Sixel Graphics
+% - Extensions
+%   - Complex unicode (grapheme clusters)
+%   - Current working directory information
+%   - File transfer
+%   - Hyperlink
+%   - Notification
+%   - Synchronized Output
+%   - Text reflow
+%   - Vertical line marks
+
+%\include{vt-sequences/CUD} % cursor down
+\include{vt-sequences/CUP} % cursor position
+%\include{vt-sequences/CUU} % cursor up
+
+todo
+
+\end{document}
